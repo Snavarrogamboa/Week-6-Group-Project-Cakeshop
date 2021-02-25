@@ -1,5 +1,7 @@
 
 
+
+
 let utils = (function() {
     let ids = 0;
     function getNewId() {
@@ -104,7 +106,9 @@ class DOMManager {
         return `<div>
                     <div class="row">
                         <div class="col-8">
-                            <h3>${orderDesc.name} Baked by : ${orderDesc.baker} Delivery due: ${orderDesc.deliveryDate})</h3>
+                            <h4> Order Name: <small class="text-muted">${orderDesc.name}</small> <br>
+                            Baked by : <small class="text-muted">${orderDesc.baker}</small>  <br>
+                            Delivery due: <small class="text-muted">${orderDesc.deliveryDate}</small></h4>
                         </div>
                         <div class="col-4">
                             <button class="delete-order btn btn-danger" 
@@ -192,7 +196,6 @@ class DOMManager {
 
 
         $('#app').on('click', (e) =>{
-            // employing event delegation
             let $target = $(e.target);
             let targetId= $target.attr('id');
     
@@ -210,12 +213,14 @@ class DOMManager {
             } else if (targetId.startsWith('add-cake-for-order')) {
                 let orderId = $target.data('orderId');
                 // get the cake info we need
+
                 let flavor = $(`#new-cake-flavor-${orderId}`).val();
-                let frosting = $(`#new-cake-flavor-${orderId}`).val();
-                let layers = $(`#new-cake-layers-${orderId}`).val();
-                let shape = $(`#new-cake-shape-${orderId}`).val();
+                let frosting = $(`#new-cake-frosting-${orderId}`).val();
+                let layers = $(`#new-layers-${orderId}`).val();
+                let shape = $(`#new-shape-${orderId}`).val();
     
-                // we will 'update' the order with the new cake
+                // we will update the order with the new cake
+
                 let orderToUpdate;
                 currentState.forEach(order => {
                     if (order.id === orderId) {
