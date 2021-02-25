@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEEK6PROJECT</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel ="stylesheet" href="style.css">
+   
+   
+
+
+</head>
+<body class="container">
+    
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://cdn3.iconfinder.com/data/icons/party-87/512/Cake_cake_dessert_wedding_birthday_party-128.png" width="50" height="50" class="d-inline-block align-top" alt="">
+         
+        </a>
+      </nav>
+
+      <br>
+      
+
+      <h1>
+        Minimalistic
+        <small class="text-muted">cakeshop</small>
+      </h1>
+
+      <br>
+
+      <div class="row">
+        <div class="col">
+            <div id="new-cake" class="jumbotron">
+              <p class="h3">New Cake Order</p>
+              <br>
+                <div class="form-group">
+                    <label for="new-cake-order-name">Name of Order:</label>
+                    <input type="text" id="new-order-first-name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="baker-name">Baker:</label> 
+                    <input type="text" id="baker-name" class="form-control">
+                </div>                    
+                <div class="form-group">
+                    <label for="date-due">Date to be Completed:</label>
+                    <input type="date" id="date-due" class="form-control">
+                </div>
+                <br>
+                <div class="center">
+                  <button id="create-new-cake" type="button" class="btn btn-secondary btn-lg">Add to Order</button>
+                </div>   
+            </div>
+        </div>
+    </div>
+      
+
+   <!--rest will be coded in js template literals (?) -->
+
+  
+  
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
