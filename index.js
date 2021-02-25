@@ -1,6 +1,4 @@
-
-
-
+//utilities
 
 let utils = (function() {
     let ids = 0;
@@ -242,5 +240,8 @@ class DOMManager {
     
     DOMManager.init();
   
+
+
+
 
 
